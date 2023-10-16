@@ -36,7 +36,9 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="index.html">Jumlah Sekolah</a></li>
-                            <li><a class="dropdown-item" href="index.html">Jumlah Guru</a></li>
+                            <li><a class="dropdown-item" href="Pendidikan.html">Jumlah Guru dan Murid</a></li>
+                            <li><a class="dropdown-item" href="RasioSM.html">Rasio Sekolah Murid</a></li>
+                            <li><a class="dropdown-item" href="PerbandinganGM.html">Rasio Guru Murid</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -55,7 +57,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Sekolah</h5>
+                <h5>Jumlah Guru dan Murid</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -94,10 +96,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         var options = {
-            series: [{
-                name: 'Jumlah Sekolah',
-                data: [67, 53, 63, 63, 65, 60, 46, 67, 118, 66, 84, 74, 76, 76, 94, 60, 54]
-            },
+            series: [
             {
                 name: 'Jumlah Guru',
                 data: [391, 324, 407, 439, 471, 421, 349, 496, 1715, 496, 542, 702, 590, 390, 656, 398, 351]

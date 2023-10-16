@@ -42,11 +42,9 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="index.html">Jumlah Sekolah</a></li>
-                            <li><a class="dropdown-item" href="Pendidikan.html">Jumlah Guru dan Murid</a></li>
-                            <li><a class="dropdown-item" href="Rasio.html">Rasio Sekolah Murid</a></li>
-                            <li><a class="dropdown-item" href="PerbandinganGM.html">Rasio Guru Murid</a></li>
-
-
+                <li><a class="dropdown-item" href="Pendidikan.html">Jumlah Guru dan Murid</a></li>
+                <li><a class="dropdown-item" href="RasioSM.html">Rasio Sekolah Murid</a></li>
+                <li><a class="dropdown-item" href="PerbandinganGM.html">Rasio Guru Murid</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
@@ -70,7 +68,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Rasio Sekolah dan Murid</h5>
+                <h5>Rasio Guru dan Murid</h5>
             </div>
             <div class="card-body">
                 <div id="chart">
@@ -128,29 +126,42 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js" integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-      var options = {
-          series: ['76,88059701','77,71698113','88,6031746','86,84126984','102,6615385','107,2','114,5434783', '118,4029851','254,9491525','122,8333333', '103,4166667', '144,6351351','106,0657895','120,3289474','110,5425532','98,96666667','88,46296296'],
+     var options = {
+          series: [{
+            name: "Rasio Guru dan Murid",
+            data: ['13,17391304','12,71296296','13,71498771','12,46241458','14,16772824','15,27790974','15,0974212','15,99395161','17,54169096','16,34475806','16,02767528','15,24643875','13,66271186','23,44871795','15,83993902','14,91959799','13,60968661']
+        }],
           chart: {
-          type: 'donut',
-          width: 500
-           },
-        labels: ['Jatipuro', 'Jatiyoso', 'Jumapolo', 'Jumantono', 'Matesih', 'Tawangmangu', 'Ngargoyoso', 'Karangpandan', 'Karanganyar', 'Tasikmadu', 'Jaten', 'Colomadu', 'Gondangrejo', 'Kebakkramat', 'Mojogedang', 'Kerjo', 'Jenawi'],
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
+          height: 350, 
+          type: 'line',
+          color : '#49e3c4',
+          zoom: {
+            enabled: false
           }
-        }]
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        title: {
+          text: 'Rasio Guru dan Murid',
+          align: 'left'
+        },
+        grid: {
+          row: {
+            colors: ['#daede9', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: ['Jatipuro', 'Jatiyoso', 'Jumapolo', 'Jumantono', 'Matesih', 'Tawangmangu', 'Ngargoyoso', 'Karangpandan', 'Karanganyar', 'Tasikmadu', 'Jaten', 'Colomadu', 'Gondangrejo', 'Kebakkramat', 'Mojogedang', 'Kerjo', 'Jenawi'],
+        }
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
-      
 </script>  
 </body>
   
